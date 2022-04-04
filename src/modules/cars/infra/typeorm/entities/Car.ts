@@ -55,7 +55,7 @@ class Car {
   })
   specifications: Specification[];
 
-  @OneToMany(() => CarImage, (cars_images) => cars_images.car)
+  @OneToMany(() => CarImage, (cars_image) => cars_image.car)
   cars_images: CarImage[];
 
   @CreateDateColumn()
