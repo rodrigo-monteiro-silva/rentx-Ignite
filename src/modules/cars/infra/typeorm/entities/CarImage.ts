@@ -20,7 +20,7 @@ class CarImage {
   @Column()
   image_name: string;
 
-  @ManyToOne(() => Car, (car) => car.cars_images)
+  @ManyToOne(() => Car, (car) => car.cars_image)
   @JoinColumn({ name: "car_id" })
   car: Car;
 

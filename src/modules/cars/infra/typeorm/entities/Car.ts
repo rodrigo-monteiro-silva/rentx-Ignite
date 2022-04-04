@@ -56,7 +56,7 @@ class Car {
   specifications: Specification[];
 
   @OneToMany(() => CarImage, (cars_image) => cars_image.car)
-  cars_images: CarImage[];
+  cars_image: CarImage[];
 
   @CreateDateColumn()
   created_at: Date;
