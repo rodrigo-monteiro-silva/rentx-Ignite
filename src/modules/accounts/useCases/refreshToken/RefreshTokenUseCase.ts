@@ -1,4 +1,4 @@
-import { inject } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 import { verify, sign } from "jsonwebtoken";
 
 import { IUsersTokensRepository } from "../../repositories/IUsersTokensRepository";
@@ -11,6 +11,7 @@ interface IPayLoad {
   email: string;
 }
 
+@injectable()
 class RefreshTokenUseCase {
   constructor(
     @inject("UsersTokensRepository")
